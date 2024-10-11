@@ -1,0 +1,42 @@
+-- 1 - CRIANDO CONEXÃO PYTHON COM BANCO DE DADOS (MYSQL) VIA VSCODE:
+
+-- 2 - Abrir VScode
+
+-- 3 - Colar no terminal o seguinte código para navegar até a pasta que deseja criar o ambiente virtual
+-- CÓDIGO: cd C:\Users\Chaves\Desktop\Curso_DBA_Senac\Exercicios\Academia
+
+-- 4 - Criando o ambiente virtual com VENV
+-- CÓDIGO: python -m venv venv
+-- isso criará uma pasta dentro de 'academia' chamada venv
+
+-- 5 - Executar o comando abaixo para ativar o ambiente virtual
+-- CÓDIGO: .\venv\Scripts\activate
+
+-- 6 - Com o ambiente virtual ativo, agora você pode instalar o pacotemysql-connector-python
+-- CÓDIGO: pip install mysql-connector-python
+
+-- 7 - Confirmar se o pacote de conexão foi instalado
+-- CÓDIGO: pip list
+
+-- 8 - Se tudo estiver ok então é só criar a conexão.
+-- CÓDIGO: 
+import mysql.connector
+
+def conectar_banco():
+    conn = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="123456",
+        database="agregacao"
+    )
+    return conn
+
+# Teste a conexão
+conn = conectar_banco()
+
+if conn.is_connected():
+    print("Conexão bem-sucedida!")
+    conn.close()
+else:
+    print("Falha na conexão.")
+

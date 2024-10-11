@@ -1,0 +1,18 @@
+projeto_flask/
+│
+├── app.py                  # Código principal da aplicação Flask
+├── requirements.txt        # Lista de dependências do projeto
+├── config.py               # Configurações do banco de dados e outras configurações
+│
+├── templates/              # Pasta para armazenar arquivos HTML
+│   ├── index.html
+│   ├── add_produto.html
+│   └── edit_produto.html
+│
+├── static/                 # Pasta para arquivos estáticos (CSS, JS, imagens)
+│   ├── styles.css          # Estilos CSS
+│   └── script.js           # Scripts JavaScript
+│
+└── database/               # Pasta para arquivos relacionados ao banco de dados
+    ├── agregacao.sql      # Script de criação do banco de dados e tabelas
+    └── outros_scripts.sql   # Outros scripts SQL, se necessário
