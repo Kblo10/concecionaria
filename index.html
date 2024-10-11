@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Concessionária</title>
+    <style>
+        body {
+            background-image: url('/static/img/bmw.jpg'); /* Caminho da imagem */
+            background-size: cover; /* Cobre toda a área da tela */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Não repete a imagem */
+            background-color: #f0f0f0; /* Cor de fundo */
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex; /* Ativa o flexbox */
+            flex-direction: column; /* Organiza os itens em uma coluna */
+            width: 200px; /* Define uma largura específica para o menu */
+            margin: auto; /* Centraliza o menu horizontalmente */
+        }
+
+        nav ul {
+            list-style-type: none; /* Remove os marcadores da lista */
+            padding: 0; /* Remove o preenchimento padrão */
+            margin: 0; /* Remove a margem padrão */
+        }
+
+        nav ul li {
+            margin: 10px 0; /* Adiciona margem entre os itens */
+        }
+
+        nav ul li a {
+            display: block; /* Faz o link ocupar toda a largura do item da lista */
+            padding: 10px; /* Adiciona preenchimento para aumentar a área clicável */
+            background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo para destaque */
+            color: #fff; /* Cor do texto */
+            text-decoration: none; /* Remove o sublinhado */
+            border-radius: 5px; /* Adiciona bordas arredondadas */
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo à Concessionária</h1>
+    <nav>
+        <ul>
+            
+            <li><a href="{{ url_for('list_veiculos') }}">Veículos</a></li>
+            <li><a href="{{ url_for('list_clientes') }}">Clientes</a></li>
+            <li><a href="{{ url_for('list_funcionarios') }}">Funcionários</a></li>
+            <li><a href="{{ url_for('list_vendas') }}">Vendas</a></li>
+            <li><a href="{{ url_for('list_perfis_cargos') }}">Perfis e Cargos</a></li>
+            <li><a href="{{ url_for('list_teste_drive') }}">Teste Drive</a></li>
+            <li><a href="{{ url_for('list_estoque') }}">Estoque</a></li>
+            <li><a href="{{ url_for('list_galpao') }}">Galpão</a></li>
+            <li><a href="{{ url_for('list_financiamentos') }}">Financiamentos</a></li>
+            <li><a href="{{ url_for('list_situacao_financiamento') }}">Situação do Financiamento</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
